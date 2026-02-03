@@ -25,7 +25,7 @@ import sys
 import os
 
 print("=" * 60)
-print("DIAGNOSTIC REPORT")
+print("\033[92m DIAGNOSTIC REPORT \033[0m")
 print("=" * 60)
 print(f"\nPython Version: {sys.version}")
 print(f"Current Directory: {os.getcwd()}")
@@ -35,7 +35,7 @@ for f in sorted(os.listdir('.')):
         print(f"   {f}")
 
 print("\n" + "=" * 60)
-print("TESTING PACKAGE IMPORTS")
+print("\033[92m TESTING PACKAGE IMPORTS \033[0m")
 print("=" * 60)
 
 # Test each package individually
@@ -59,7 +59,7 @@ for module, install_cmd in packages_to_test:
         failed_packages.append(install_cmd)
 
 print("\n" + "=" * 60)
-print("TESTING LOCAL MODULE IMPORTS")
+print("\033[92m TESTING LOCAL MODULE IMPORTS \033[0m")
 print("=" * 60)
 
 local_modules = ['database', 'models', 'schemas', 'authentication', 'db_interaction']
@@ -72,7 +72,7 @@ for module in local_modules:
         print(f"{module}.py - ERROR: {e}")
 
 print("\n" + "=" * 60)
-print("TESTING MAIN.PY IMPORT")
+print("\033[92m TESTING MAIN.PY IMPORT \033[0m")
 print("=" * 60)
 
 try:
