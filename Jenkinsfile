@@ -32,6 +32,7 @@ pipeline
             steps
             {
                echo ' testing the application'
+               sh 'run_unit_test.bat'
             }
         }
     }
