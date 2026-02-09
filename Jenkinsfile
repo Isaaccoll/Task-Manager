@@ -30,17 +30,5 @@ pipeline {
                 sh 'pytest'
                  }
          }
-    }
-    post {
-        always {
-            // 
-        }
-        success {
-            
-        }
-        failure {
-            
-        }
-    }
-    
+    }  
 }
