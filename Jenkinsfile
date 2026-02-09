@@ -1,18 +1,24 @@
-pipeline {
+pipeline
+{
     agent any
-    environment {
+    environment
+    {
         NEW_VERSION = '1.3.0'
         SERVER_CREDENTIALLS = credentials('')
     }
-    stages {
-        stage('CurrentBuild') {
-            steps {
-        
+    stages 
+    {
+        stage('CurrentBuild')
+        {
+            steps 
+            {
                 sh "pwd"
             }
         }
-        stage('Checkout') {
-            steps {
+        stage('Checkout') 
+        {
+            steps 
+            {
                echo 'Checking out the application'
             }
         }
@@ -25,11 +31,11 @@ pipeline {
          }
         stage('Test')
         {
-            steps {
+            steps
+            {
                echo ' testing the application'
                 sh 'pytest'
-                 }
-         }
+            }
+        }
     }
-    }  
 }
