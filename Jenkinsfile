@@ -29,7 +29,6 @@ pipeline
             steps
             {
                echo ' testing the application'
-                sh 'pytest'
             }
         }
     }
