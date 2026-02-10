@@ -1,29 +1,39 @@
-pipeline {
+pipeline
+{
     agent any
-
-    stages {
-        stage('Path') {
-            steps {
-        
+    environment{
+        NEW_VERSION = '1.3.0'
+    }
+    stages 
+    {
+        stage('CurrentBuild')
+        {
+            steps 
+            {
                 sh "pwd"
             }
         }
-        stage('Checkout') {
-            steps {
+        stage('Checkout') 
+        {
+            steps 
+            {
                echo 'Checking out the application'
             }
         }
         stage('Build')
         {
             steps {
-               echo ' building the application
+               echo ' building the application'
+               echo "building version ${NEW_VERSION}"
                  }
          }
         stage('Test')
         {
-            steps {
+            steps
+            {
                echo ' testing the application'
-                 }
-         }
+               sh 'run_unit_test.bat'
+            }
+        }
     }
 }
