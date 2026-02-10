@@ -20,7 +20,8 @@ echo Application Started!
 echo ========================================
 echo Backend Server: http://localhost:8000
 echo Frontend: Check your browser
-echo.
+echo
+
 echo To stop the server, close the backend window
 echo ========================================
 pause
